@@ -1,24 +1,26 @@
-# README
+# Description
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a project that allows users to create events and then manage user signups. Users can create events and send invitations and parties. Events take place at a specific date and at a location (which can just be stroed as a string).
 
-Things you may want to cover:
+A user can create events. A user can attend many events. An event can be attended by many users.
 
-* Ruby version
+## Getting started
 
-* System dependencies
+To get started with the app, clone the repo and then install the needed gems:
 
-* Configuration
+```
+$ bundle install --without production
+```
 
-* Database creation
+Next, migrate the database:
 
-* Database initialization
+```
+$ rails db:migrate
+```
+# Collaborators
 
-* How to run the test suite
+<a href="https://github.com/emmanuelkamala">Emmanuel Kamala</a><br>
+<a href="https://github.com/Zibilyonik">Onur Surmeli</a>
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Live Version
+<a href="#">Live Version</a>
