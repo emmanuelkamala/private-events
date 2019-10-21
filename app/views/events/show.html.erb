@@ -1,2 +1,11 @@
-<h1>Events#show</h1>
-<p>Find me in app/views/events/show.html.erb</p>
+<%= link_to("<< Back to List", events_path, :class => 'back-link') %>
+
+<div class = "events show">
+<h2>Show Event</h2>
+
+Title: <%= @event.title %><br>
+Description: <%= @event.description %><br>
+Location: <%= @event.location %><br>
+Date: <%= @event.date %><br>
+Created by: <%= @event.users %>
+</div>

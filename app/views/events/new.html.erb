@@ -1,2 +1,14 @@
-<h1>Events#new</h1>
-<p>Find me in app/views/events/new.html.erb</p>
+<%= link_to("<< Back to List", events_path, :class => 'back-link') %>
+
+<div class="event new">
+<h2>Create Event</h2>
+<%= form_for(@event) do |f| %>
+<p>Title: <br><%= f.text_field(:title) %></p>
+<p>Description: <br><%= f.text_area(:description, size: "60x12") %></p>
+<p>Location:<br> <%= f.text_field(:location) %></p>
+<p>Date:<br> <%= f.date_field(:date) %></p>
+
+<%= f.submit("Create Event") %>
+
+<% end %>
+</div>
