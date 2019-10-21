@@ -1,14 +1,14 @@
 <%= link_to("<< Back to List", events_path, :class => 'back-link') %>
 
-<div class="event new">
-<h2>Create Event</h2>
+<div class="event edit">
+<h2>Update Event</h2>
 <%= form_for(@event) do |f| %>
 <p>Title: <br><%= f.text_field(:title, size: "60") %></p>
 <p>Description: <br><%= f.text_area(:description, size: "60x12") %></p>
 <p>Location:<br> <%= f.text_field(:location) %></p>
 <p>Date:<br> <%= f.date_field(:date) %></p>
 
-<%= f.submit("Create Event") %>
+<%= f.submit("Update Event") %>
 
 <% end %>
 </div> 

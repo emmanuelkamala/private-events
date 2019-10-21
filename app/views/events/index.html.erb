@@ -1,3 +1,10 @@
+<% if !flash[:notice].blank? %>
+    <div class="notice">
+    <%= flash[:notice] %>
+    </div>
+<% end %>
+
+
 <div class = "events index">
 <h2>Events</h2>
 <p><%= link_to("Add New Event", new_event_path, :class => 'action new') %><br></p>
@@ -5,8 +12,8 @@
 Title:  <%= event.title %><br>
 Description:  <%= event.description %><br>
 <%= link_to("Show", event_path(event), :class => 'action show') %>
-<%= link_to("Edit", '#', :class => 'action edit') %>
-<%= link_to("Delete", '#', :class => 'action delete') %>
+<%= link_to("Edit", edit_event_path(event), :class => 'action edit') %>
+<%= link_to("Delete", delete_event_path(event), :class => 'action delete') %>
 <p></p>
 <% end %>
 </div>
