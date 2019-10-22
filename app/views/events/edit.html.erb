@@ -3,10 +3,8 @@
 <div class="event edit">
 <h2>Update Event</h2>
 <%= form_for(@event) do |f| %>
-<p>Title: <br><%= f.text_field(:title, size: "60") %></p>
-<p>Description: <br><%= f.text_area(:description, size: "60x12") %></p>
-<p>Location:<br> <%= f.text_field(:location) %></p>
-<p>Date:<br> <%= f.date_field(:date) %></p>
+    <%= render(:partial => 'form', :locals => {:f => f}) %>
+
 
 <%= f.submit("Update Event") %>
 

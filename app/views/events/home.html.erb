@@ -1,0 +1,13 @@
+<% @page_title = "All Events" %>
+
+
+<div class = "events index">
+<h2>Events</h2>
+<% @events.each do |event| %>
+Title:  <%= event.title %><br>
+Description:  <%= event.description %><br>
+<%= link_to("Click to read the full event detail", event_path(event), :class => 'action show') %>
+<p></p>
+<% end %>
+</div>
+

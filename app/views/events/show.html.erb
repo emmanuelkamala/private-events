@@ -1,8 +1,4 @@
-<% if !flash[:notice].blank? %>
-    <div class="notice">
-    <%= flash[:notice] %>
-    </div>
-<% end %>
+
 
 <%= link_to("<< Back to List", events_path, :class => 'back-link') %>
 
@@ -13,5 +9,5 @@ Title: <%= @event.title %><br>
 Description: <%= @event.description %><br>
 Location: <%= @event.location %><br>
 Date: <%= @event.date %><br>
-Created by: <%= @event.users %>
+Created by:
 </div>
