@@ -2,16 +2,24 @@
 <html>
   <head>
     <title>Private Events: <%= @page_title || "Welcome to our events"%></title>
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_tag 'application', 'data-turbolinks-track' => true %>
   </head>
 
-  <body>
+  <body>   
+  
+  <%= render 'layouts/navigation' %>
+
   <% if !flash[:notice].blank? %>
     <div class="notice">
     <%= flash[:notice] %>
     </div>
   <% end %>
+  <div class="container basic">
     <%= yield %>
+  </div>
+
+  <%= render 'layouts/footer' %>
   </body>
 </html>
 

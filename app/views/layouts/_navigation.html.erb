@@ -1,0 +1,14 @@
+<nav class="navbar navbar-dark bg-dark">
+  <%= link_to "Private Events", root_path, class: "navbar-brand", id: "logo" %>
+  <form class="form-inline">
+  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0 look" type="submit">Search </button>
+    <%= link_to "login", access_login_path, class: "btn btn-outline-primary", role: "button" %>
+    <div style="padding-left: 10px;">
+      <a class="btn btn-outline-success" href="/signup" role="button">
+      Sign Up
+      </a>
+    </div>
+    
+  </form>
+</nav>
