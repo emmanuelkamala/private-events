@@ -1,11 +1,21 @@
 <% if object && object.errors.size > 0 %>
-<div id = "error-explanation">
- <h2><%= pluralize(object.errors.size, "error") %> Prohibited this record from being saved</h2>
-<p>There were problems with the following fields:</p>
-<ul>
-<% object.errors.full_messages.each do |msg| %>
-<li><%= msg %></li>
-<% end %>
-</ul>
+ <div class="row problem">
+    <div class="col-xs-8 col-xs-offset-4">
+        <div class="panel panel-danger">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                  <%= pluralize(object.errors.size, "error") %> Prohibited this record from being saved
+                </h3>
+                <div class="panel-body">
+                    <ul>
+                        <% object.errors.full_messages.each do |msg| %>
+                        <li><%= msg %></li>
+                        <% end %>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
 <% end %>

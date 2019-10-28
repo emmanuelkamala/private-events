@@ -9,13 +9,10 @@
   <body>   
   
   <%= render 'layouts/navigation' %>
-
-  <% if !flash[:notice].blank? %>
-    <div class="notice">
-    <%= flash[:notice] %>
-    </div>
-  <% end %>
+  
+  
   <div class="container basic">
+    <%= render 'layouts/messages' %>
     <%= yield %>
   </div>
 
