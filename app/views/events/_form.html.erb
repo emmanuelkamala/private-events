@@ -1,7 +1,45 @@
 <%= error_messages_for(f.object) %>
 
-<p>Title: <br><%= f.text_field(:title, size: "60") %></p>
-<p>Description: <br><%= f.text_area(:description, size: "60x12") %></p>
-<p>Location:<br> <%= f.text_field(:location) %></p>
-<p>Date:<br> <%= f.datetime_local_field(:date) %></p>
-
+<div class="row">
+ <div class="col-md-12">
+  <div class="form-group">
+   <div class="control-label col-sm-2">
+    <%= f.label :title %>
+   </div>
+   <div class="col-sm-8">
+    <%= f.text_field :title, class: "form-control", placeholder: "Event Title", autofocus: true %>
+   </div>
+  </div>
+   
+    <p>
+    <div class="form-group">
+        <div class="control-label col-sm-2">
+            <%= f.label :description %>
+        </div>
+        <div class="col-sm-8">
+            <%= f.text_area :description, class: "form-control", placeholder: "Event Description", autofocus: true, size: "60x12" %>
+        </div>
+    </p>
+    </div>
+    <p>
+    <div class="form-group">
+        <div class="control-label col-sm-2">
+            <%= f.label :location %>
+        </div> 
+        <div class="col-sm-6">
+            <%= f.text_field :location, class: "form-control", placeholder: "Location", autofocus: true%>
+        </div>
+    </div>
+        </p>
+    
+    <div class="form-group">
+        <div class="control-label col-sm-2">
+            <%= f.label :date %>
+        </div> 
+        <div class="col-sm-6">
+        <%= f.datetime_select :date, class: "form-control", autofocus: true%>
+        </div>
+    </div> 
+    </p>
+</div>
+</div>
