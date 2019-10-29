@@ -6,18 +6,19 @@
     and share it with others to attend your event.</p>
   <hr class="my-4">
   <p>Sign up below to start creating your event.</p>
-  <%= link_to "Sign up now", "#", class: "btn btn-primary btn-lg more", role: "button" %>
+  <%= link_to "Sign up now", signup_path, class: "btn btn-primary btn-lg more", role: "button" %>
 </div>
 
 <div class = "events index">
 <h2>Events</h2>
 <p><%= link_to("Add New Event", new_event_path, :class => 'btn btn-xs btn-primary') %><br></p>
 <% @events.each do |event| %>
-Title:  <%= event.title %><br>
-Description:  <%= event.description %><br>
-<%= link_to("Show", event_path(event), :class => 'action show') %>
-<%= link_to("Edit", edit_event_path(event), :class => 'action edit') %>
-<%= link_to("Delete", delete_event_path(event), :class => 'action delete') %>
+<h4>Title:</h4>  <%= event.title %><br>
+<h4>Description:</h4>  <%= event.description %><br>
+<p>Created by: <%= event.users %></p>
+<%= link_to("Show", event_path(event), :class => 'btn btn-xs btn-success') %>
+<%= link_to("Edit", edit_event_path(event), :class => 'btn btn-xs btn-primary') %>
+<%= link_to("Delete", delete_event_path(event), :class => 'btn btn-xs btn-danger') %>
 <p></p>
 <% end %>
 </div>
