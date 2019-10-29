@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'events#home'
+  root 'events#index'
   
   get 'admin', :to => 'access#menu'
   get 'access/menu'

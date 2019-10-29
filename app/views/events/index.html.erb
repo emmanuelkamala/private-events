@@ -1,9 +1,17 @@
 <% @page_title = "All Events" %>
 
+<div class="center jumbotron">
+  <h1 class="display-4">Welcome to Private Events</h1>
+  <p class="intro lead">Anyone can create an event that serves a certain purpose. All you have to do is sign up, create your event,
+    and share it with others to attend your event.</p>
+  <hr class="my-4">
+  <p>Sign up below to start creating your event.</p>
+  <%= link_to "Sign up now", "#", class: "btn btn-primary btn-lg more", role: "button" %>
+</div>
 
 <div class = "events index">
 <h2>Events</h2>
-<p><%= link_to("Add New Event", new_event_path, :class => 'action new') %><br></p>
+<p><%= link_to("Add New Event", new_event_path, :class => 'btn btn-xs btn-primary') %><br></p>
 <% @events.each do |event| %>
 Title:  <%= event.title %><br>
 Description:  <%= event.description %><br>
