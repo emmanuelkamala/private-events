@@ -30,7 +30,7 @@ class AccessController < ApplicationController
   def logout
     session[:user_id] = nil
     flash[:notice] = 'Logged out'
-    redirect_to(access_login_path)
+    redirect_to(login_path)
   end
 
   private
@@ -38,7 +38,7 @@ class AccessController < ApplicationController
   def confirm_logged_in
     unless session[:user_id]
       flash[:notice] = "Please log in."
-      redirect_to(access_login_path)
+      redirect_to(login_path)
      end
   end
 end

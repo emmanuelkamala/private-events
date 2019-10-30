@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   
   get 'admin', :to => 'access#menu'
   get 'access/menu'
-  get 'access/login'
-  post 'access/attempt_login'
-  get 'access/logout'
+  get 'login', :to => 'access#login'
+  post 'login', :to => 'access#attempt_login'
+  get 'logout', :to => 'access#logout'
   get 'signup', :to => 'users#new'
  
   resources :events do 
