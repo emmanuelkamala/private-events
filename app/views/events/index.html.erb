@@ -9,17 +9,4 @@
   <%= link_to "Sign up now", signup_path, class: "btn btn-primary btn-lg more", role: "button" %>
 </div>
 
-<div class = "events index">
-<h2>Events</h2>
-<p><%= link_to("Add New Event", new_event_path, :class => 'btn btn-xs btn-primary') %><br></p>
-<% @events.each do |event| %>
-<h4>Title:</h4>  <%= event.title %><br>
-<h4>Description:</h4>  <%= event.description %><br>
-<p>Created by: <%= event.users %></p>
-<%= link_to("Show", event_path(event), :class => 'btn btn-xs btn-success') %>
-<%= link_to("Edit", edit_event_path(event), :class => 'btn btn-xs btn-primary') %>
-<%= link_to("Delete", delete_event_path(event), :class => 'btn btn-xs btn-danger') %>
-<p></p>
-<% end %>
-</div>
-
+<%= render 'event', obj: @events %>

@@ -20,6 +20,12 @@
     color: white;
 }
 
+.img-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .jumbotron {
     background-image: asset-url('events.jpg');
     background-size: cover;
@@ -38,7 +44,7 @@
 }
 
 .notice {
-    width: 450%;
+    width: 150%;
 }
 
 .intro {

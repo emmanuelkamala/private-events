@@ -1,0 +1,44 @@
+
+<div class="row">
+<div class="col-md-12">
+<div class="user">
+<%= error_messages_for(@user) %>
+<%= form_for(@user, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+ <div class="form-group">
+  <div class="control-label col-sm-2">
+   <%= f.label :username %>
+  </div>
+  <div class="col-sm-8">
+   <%= f.text_field :username, class: "form-control", placeholder: "Enter your username", autofocus: true %>
+  </div>
+ </div>
+  
+   <p>
+   <div class="form-group">
+       <div class="control-label col-sm-2">
+       <%= f.label :email %>
+       </div>
+       <div class="col-sm-8">
+        <%= f.email_field :email, class: "form-control", placeholder: "Enter your email", autofocus: true %> </div>
+   </p>
+   </div>
+   <p>
+   <div class="form-group">
+       <div class="control-label col-sm-2">
+       <%= f.label :password %>
+       </div>
+       <div class="col-sm-8">
+        <%= f.password_field :password, class: "form-control", placeholder: "Password", autofocus: true %></div>
+   </div>
+       </p>
+
+       <div class="form-group">
+     <div class="col-sm-10">
+       <%= f.submit(@user.new_record? ? "Sign up" : "Update your account", class: "btn btn-primary btn-lg") %>
+     </div>
+   </div>
+
+   <% end %>
+</div>
+</div>
+</div>
