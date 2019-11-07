@@ -4,8 +4,8 @@
 
     <% if logged_in? %>
 
-      <%= link_to "All Events", events_path, class: "btn btn-outline-info left", role: "button" %>
-      <%= link_to "My Events", events_path(current_user), class: "btn btn-outline-info left", role: "button" %> 
+      <%= link_to "All Events", home_path, class: "btn btn-outline-info left", role: "button" %>
+      <%= link_to "My Events", home_path(current_user), class: "btn btn-outline-info left", role: "button" %> 
       <%= link_to "Create Event", new_event_path, class: "btn btn-outline-success left", role: "button" %>
       <%= link_to "Edit profile", edit_user_path(current_user), class: "btn btn-outline-info left", role: "button" %>
       <%= link_to "View profile", user_path(current_user), class: "btn btn-outline-info left", role: "button" %>

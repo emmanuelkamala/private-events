@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   post 'login', :to => 'access#attempt_login'
   get 'logout', :to => 'access#logout'
   get 'signup', :to => 'users#new'
+  get 'home', :to => 'events#home'
  
   resources :events do 
     member do

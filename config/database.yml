@@ -20,6 +20,12 @@ test:
   <<: *default
   database: db/test.sqlite3
 
+# production:
+#   <<: *default
+#   database: db/production.sqlite3
+
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: private-events_production
+  username: private-events
+  password: <%= ENV['PRIVATE-EVENTS_DATABASE_PASSWORD'] %>
