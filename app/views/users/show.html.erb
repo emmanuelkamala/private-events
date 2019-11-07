@@ -7,4 +7,7 @@
 </div>
 
 <h4 align="center"><%= @user.username %>'s events</h4>
-<%= render 'events/event', obj: @user.events %>
+<div align="center">
+  <%= will_paginate @user_events %>
+</div>
+<%= render 'events/event', obj: @user_events %>

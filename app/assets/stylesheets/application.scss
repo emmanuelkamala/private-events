@@ -8,11 +8,43 @@
     text-transform: uppercase;
 }
 
+.left {
+    margin-left: 20px;
+}
+
+.events-left, .events-right {
+    background-color: rgb(233, 232, 232);
+    border-radius: 5px;
+    padding: 15px;
+    width: 49%;
+}
+
+.events-left {
+    margin-right: 20px;
+}
+
+.line {
+    border-bottom: solid grey 1px;
+    padding-top: 10px;
+}
+
+
+.show-event {
+    margin: 0 auto;
+    width: 80%;
+
+}
+
+.listing li {
+    list-style-type: none;
+}
+
 .basic {
     margin-top: 10px;
     font-family: 'Roboto-condensed';
     font-size: 1.2em;
 }
+
 
 .center {
     text-align: center;

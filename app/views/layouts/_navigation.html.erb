@@ -1,14 +1,24 @@
 <nav class="navbar navbar-dark bg-dark">
   <%= link_to "Private Events", root_path, class: "navbar-brand", id: "logo" %>
   <form class="form-inline">
-  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0 look" type="submit">Search </button>
-    <%= link_to "login", login_path, class: "btn btn-outline-primary", role: "button" %>
-    <div style="padding-left: 10px;">
-      <a class="btn btn-outline-success" href="/signup" role="button">
-      Sign Up
-      </a>
-    </div>
-    
+
+    <% if logged_in? %>
+
+      <%= link_to "All Events", events_path, class: "btn btn-outline-info left", role: "button" %>
+      <%= link_to "My Events", events_path(current_user), class: "btn btn-outline-info left", role: "button" %> 
+      <%= link_to "Create Event", new_event_path, class: "btn btn-outline-success left", role: "button" %>
+      <%= link_to "Edit profile", edit_user_path(current_user), class: "btn btn-outline-info left", role: "button" %>
+      <%= link_to "View profile", user_path(current_user), class: "btn btn-outline-info left", role: "button" %>
+      <%= link_to "logout", logout_path, method: :delete, class: "btn btn-outline-danger left", role: "button" %>
+    <% else %>
+      <%= link_to "login", login_path, class: "btn btn-outline-primary", role: "button" %>
+        <div style="padding-left: 10px;">
+          <a class="btn btn-outline-success" href="/signup" role="button">
+          Sign Up
+          </a>
+        </div>
+
+    <% end %>
+  
   </form>
 </nav>

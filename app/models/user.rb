@@ -9,6 +9,8 @@ class User < ApplicationRecord
                length: {maximum: 100},
                format: {with: VALID_EMAIL_REGEX}
     has_secure_password
-    has_many :event_attendances
+
+    has_many :events, foreign_key: :user_id
+    has_many :event_attendances, foreign_key: :user_id
     has_many :events, :through => :event_attendances 
 end

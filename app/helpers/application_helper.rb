@@ -10,4 +10,20 @@ module ApplicationHelper
      image_tag(gravatar_url, alt: user.username, class: "img-circle")
 
     end
+
+    def upcoming_events
+      upcoming = []
+      @user.attended_events.each do |event|
+        upcoming << event if event.date >= Time.zone.now
+      end
+      upcoming
+    end
+  
+    def past_events
+      past = []
+      @user.attended_events.each do |event|
+        past << event if event.date < Time.zone.now
+      end
+      past
+    end
 end

@@ -1,13 +1,17 @@
 class EventsController < ApplicationController
   layout 'admin'
+
+  before_action :require_user, except: [:index, :show]
   
   def index
-    @events = Event.all
+    @upcoming_events = Event.upcoming.paginate(page: params[:page], per_page: 5)
+    @past_events = Event.past.paginate(page: params[:page], per_page: 5)
+
   end
 
-  def home
-    @events = Event.all
-  end
+  # def home
+  #   #@events = Event.all
+  # end
 
   def show
     @event = Event.find(params[:id])
@@ -21,7 +25,7 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(events_params)
-    @event.user_id = current_user.id
+    @event.user = current_user
       if @event.save
       flash[:success] = "Event created successfully"
       redirect_to(events_path)

@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2019_10_29_144623) do
     t.string "description"
     t.string "location"
     t.datetime "date"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
