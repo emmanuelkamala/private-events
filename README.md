@@ -1,6 +1,6 @@
 # Description
 
-This is a project that allows users to create events and then manage user signups. Users can create events and send invitations and parties. Events take place at a specific date and at a location (which can just be stroed as a string).
+This is a project that allows users to create events and then manage user signups. Users can create events and allow registered users to attend invitations and parties by simply clicking the attend button. Events take place at a specific date and at a described location.
 
 A user can create events. A user can attend many events. An event can be attended by many users.
 
@@ -23,4 +23,4 @@ $ rails db:migrate
 <a href="https://github.com/Zibilyonik">Onur Surmeli</a>
 
 # Live Version
-<a href="#">Live Version</a>
+<a href="eventyangu.herokuapp.com">Live Version</a>
