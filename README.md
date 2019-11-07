@@ -23,4 +23,4 @@ $ rails db:migrate
 <a href="https://github.com/Zibilyonik">Onur Surmeli</a>
 
 # Live Version
-<a href="eventyangu.herokuapp.com">Live Version</a>
+<a href="https://eventyangu.herokuapp.com">Live Version</a>
