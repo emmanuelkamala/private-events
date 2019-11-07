@@ -14,6 +14,9 @@ Rails.application.routes.draw do
      get :delete
      get :showhome
     end
+    resources :event_attendances do
+      get :delete
+    end
   end
   resources :users
   

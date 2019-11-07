@@ -12,7 +12,27 @@
 
 Location: <%= @event.location %><br>
 Date: <%= @event.date %><br>
-Created by: <%= link_to "#{@event.user.username}", user_path(@event.user.id) %> 
+Created by: <%= link_to "#{@event.user.username}", user_path(@event.user.id) %> <br>
+
+<% if current_user %>
+    <% if @current_attendee %>
+        <%= button_to "Unattend", event_event_attendance_path(@event, @current_attendee), method: :delete, class: "btn btn-danger" %>
+    <% else %>
+        <%= button_to "Attend", event_event_attendances_path(@event), class: "btn btn-success" %>
+    <% end %>
+<% end %>
+
+<p><%= pluralize(@attendees.size, 'Attendee') %></p>
+    <% if @attendees.any? %>
+        <h3>Attendees</h3>
+            <ul>
+                <% @attendees.each do |user| %>
+                    <li>
+                        <%= link_to user.username, user %>
+                    </li>
+                <% end %>
+            </ul>
+    <% end %>
 </div>
 
 <% if logged_in? && current_user == @event.user %>

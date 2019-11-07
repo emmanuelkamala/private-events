@@ -4,6 +4,6 @@ class Event < ApplicationRecord
     scope :past, -> { where('date < ?', Time.zone.now) }
 
     belongs_to :user
-    has_many :event_attendances, foreign_key: :event_id
-    has_many :users, :through => :event_attendances
+    has_many :event_attendances, dependent: :destroy
+    has_many :attendees, :through => :event_attendances, source: :user
 end

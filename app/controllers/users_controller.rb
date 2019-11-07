@@ -18,11 +18,12 @@ class UsersController < ApplicationController
   end
 
   def index
-    @user = User.paginate(page: params[:page], per_page: 2)
+    @user = User.paginate(page: params[:page], per_page: 5)
   end
 
   def show
-    @user_events = @user.events.paginate(page: params[:page], per_page: 1)
+    @user_events = @user.attended_events.paginate(page: params[:page], per_page: 5)
+    @attended_events = @user.attended_events
   end
 
   def edit

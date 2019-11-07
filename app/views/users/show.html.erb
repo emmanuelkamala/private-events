@@ -10,4 +10,15 @@
 <div align="center">
   <%= will_paginate @user_events %>
 </div>
+
+<% if @attended_events.any? %>
+  <h3>Attend Events</h3>
+    <ul>
+      <% @attended_events.each do |event| %>
+        <li>
+          <%= link_to event.title, event %>
+        </li>
+      <% end %>
+    </ul>
+<% end %>
 <%= render 'events/event', obj: @user_events %>
