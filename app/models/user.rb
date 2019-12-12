@@ -9,7 +9,8 @@ class User < ApplicationRecord
                length: {maximum: 100},
                format: {with: VALID_EMAIL_REGEX}
     has_secure_password
-
+    
+    has_many :events
     has_many :event_attendances, dependent: :destroy
     has_many :attended_events, :through => :event_attendances, source: :event
 end

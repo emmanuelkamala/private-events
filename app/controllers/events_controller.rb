@@ -4,14 +4,17 @@ class EventsController < ApplicationController
   before_action :require_user, except: [:index, :show]
   
   def index
-    @upcoming_events = Event.upcoming.paginate(page: params[:page], per_page: 5)
-    @past_events = Event.past.paginate(page: params[:page], per_page: 5)
-
+    
+      @upcoming_events = Event.upcoming.paginate(page: params[:page], per_page: 5)
+      @past_events = Event.past.paginate(page: params[:page], per_page: 5)
+    
   end
 
   def home
-    @upcoming_events = Event.upcoming.paginate(page: params[:page], per_page: 5)
-    @past_events = Event.past.paginate(page: params[:page], per_page: 5)
+    if current_user
+      @upcoming_events = current_user.events.upcoming.paginate(page: params[:page], per_page: 5)
+      @past_events = current_user.events.past.paginate(page: params[:page], per_page: 5)
+    end
   end
 
   def show
@@ -20,6 +23,7 @@ class EventsController < ApplicationController
 
     if current_user
       @current_attendee = current_user.event_attendances.find_by(event_id: @event.id)
+      
     end
   end
 

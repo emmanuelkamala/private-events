@@ -81,6 +81,7 @@ GEM
     childprocess (3.0.0)
     concurrent-ruby (1.1.5)
     crass (1.0.5)
+    diff-lcs (1.3)
     erubi (1.9.0)
     execjs (2.7.0)
     ffi (1.11.1)
@@ -114,7 +115,6 @@ GEM
     nio4r (2.5.2)
     nokogiri (1.10.4)
       mini_portile2 (~> 2.4.0)
-    parslet (1.8.2)
     pg (1.1.4)
     popper_js (1.14.5)
     public_suffix (4.0.1)
@@ -153,6 +153,23 @@ GEM
     rb-inotify (0.10.0)
       ffi (~> 1.0)
     regexp_parser (1.6.0)
+    rspec-core (3.9.0)
+      rspec-support (~> 3.9.0)
+    rspec-expectations (3.9.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.9.0)
+    rspec-mocks (3.9.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.9.0)
+    rspec-rails (3.9.0)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec-core (~> 3.9.0)
+      rspec-expectations (~> 3.9.0)
+      rspec-mocks (~> 3.9.0)
+      rspec-support (~> 3.9.0)
+    rspec-support (3.9.0)
     ruby_dep (1.5.0)
     rubyzip (2.0.0)
     sass (3.7.4)
@@ -192,7 +209,6 @@ GEM
     thor (0.20.3)
     thread_safe (0.3.6)
     tilt (2.0.10)
-    trollop (2.9.9)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     web-console (4.0.1)
@@ -212,10 +228,6 @@ GEM
       will_paginate (~> 3.0, >= 3.0.0)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    yarn (0.1.1)
-      parslet (>= 1.2)
-      rack (>= 1.3)
-      trollop (>= 1.16)
     zeitwerk (2.2.0)
 
 PLATFORMS
@@ -233,7 +245,9 @@ DEPENDENCIES
   pg (~> 1.1.4)
   puma (~> 3.11)
   rails (~> 6.0.0)
+  rspec-rails
   sass-rails (~> 5)
+  sassc
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
@@ -243,7 +257,6 @@ DEPENDENCIES
   webdrivers
   will_paginate (~> 3.1.5)
   will_paginate-bootstrap4
-  yarn
 
 RUBY VERSION
    ruby 2.6.5p114

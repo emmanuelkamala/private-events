@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'logout', :to => 'access#logout'
   get 'signup', :to => 'users#new'
   get 'home', :to => 'events#home'
+  
  
   resources :events do 
     member do
