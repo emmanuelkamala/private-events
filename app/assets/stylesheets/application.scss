@@ -1,0 +1,105 @@
+
+@import "bootstrap";
+#logo {
+    float: left;
+    font-size: 1.7em;
+    letter-spacing: -1px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.left {
+    margin-left: 20px;
+}
+
+.events-left, .events-right {
+    background-color: rgb(233, 232, 232);
+    border-radius: 5px;
+    padding: 15px;
+    width: 49%;
+}
+
+.events-left {
+    margin-right: 20px;
+}
+
+.line {
+    border-bottom: solid grey 1px;
+    padding-top: 10px;
+}
+
+
+.show-event {
+    margin: 0 auto;
+    width: 80%;
+
+}
+
+.listing li {
+    list-style-type: none;
+}
+
+.basic {
+    margin-top: 10px;
+    font-family: 'Roboto-condensed';
+    font-size: 1.2em;
+}
+
+
+.center {
+    text-align: center;
+    font-family: 'Lato', 'serif';
+    color: white;
+}
+
+.img-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.jumbotron {
+    background-image: asset-url('events.jpg');
+    background-size: cover;
+}
+
+.look {
+    margin-right: 10px;
+}
+
+.problem {
+    width: 65%;
+    background-color: rgb(255, 171, 161);
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.notice {
+    width: 150%;
+}
+
+.intro {
+   margin: 0 80px;
+}
+
+.more {
+    background-color: rgb(0, 0, 0);
+}
+
+.footer {
+    margin-top: 45px;
+    padding-top: 15px;
+    border-top: 1px solid rgb(95, 95, 95);
+    display: flex;
+    justify-content: space-between;
+}
+
+footer ul {
+    display: inline-flex;
+    list-style-type: none;
+}
+
+footer ul li {
+    padding: 0 10px;
+}

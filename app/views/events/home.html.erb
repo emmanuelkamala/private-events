@@ -1,0 +1,26 @@
+<% @page_title = "All Events" %>
+
+
+<div class="container">
+<div class="row">
+  <div class="events-left">
+    <div align="center">
+      <h2 class="alert alert-primary" role="alert">Upcoming Events</h2>
+      <%= will_paginate @upcoming_events %>
+    </div>
+
+      <%= render 'event', obj: @upcoming_events %>
+
+  </div>
+
+  <div class="events-right">
+    <div align="center">
+      <h2 class="alert alert-primary" role="alert">Past Events</h2>
+      <%= will_paginate @past_events %>
+    </div>
+      <%= render 'event', obj: @past_events %>
+
+  </div> 
+
+</div>
+</div>

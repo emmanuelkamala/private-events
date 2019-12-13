@@ -1,0 +1,12 @@
+<% @page_title = "User Menu" %>
+
+<div class="menu">
+<h2>User Dashboard</h2>
+<div class="identity">Logged in as:</div>
+<ul>
+    <li><%= link_to("Events", events_path) %></li>
+    <li><%= link_to("Profile", '#') %></li>
+    <li><%= link_to("Logout", access_logout_path) %></li>
+</ul>
+
+</div>
