@@ -11,10 +11,10 @@ class EventsController < ApplicationController
   end
 
   def home
-    if current_user
+  
       @upcoming_events = current_user.events.upcoming.paginate(page: params[:page], per_page: 5)
       @past_events = current_user.events.past.paginate(page: params[:page], per_page: 5)
-    end
+  
   end
 
   def show
@@ -45,7 +45,9 @@ class EventsController < ApplicationController
   end
 
   def edit
-   @event = Event.find(params[:id])
+
+      @event = Event.find(params[:id])
+  
   end
 
   def update
