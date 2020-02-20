@@ -1,26 +1,60 @@
-# Description
+# Project Name
 
-This is a project that allows users to create events and then manage user signups. Users can create events and allow registered users to attend invitations and parties by simply clicking the attend button. Events take place at a specific date and at a described location.
+This is a practice project from the Odin Project using Ruby on Rails to create a an Event app project, where a user can login into a system and create events and also a non-logged in user can be able to see different events that have been created by other users.
 
-A user can create events. A user can attend many events. An event can be attended by many users.
+Inshort, a user can create events. A user can attend many events. An event can be attended by many users.
 
-## Getting started
+![screenshot](https://github.com/emmanuelkamala/private-events/raw/development/docs/event.png)
 
-To get started with the app, clone the repo and then install the needed gems:
+![screenshot](https://github.com/emmanuelkamala/private-events/raw/development/docs/event2.png)
 
-```
-$ bundle install --without production
-```
+Additional description about the project and its features.
 
-Next, migrate the database:
+## Built With
 
-```
-$ rails db:migrate
-```
-# Collaborators
+- Ruby '~>2.7'
+- Bundler '~> 2.0.0'
+- Rails '~> 6.0.2.1rc1'
+- Postgresql '>= 0.18', '< 2.0'
 
-<a href="https://github.com/emmanuelkamala">Emmanuel Kamala</a><br>
-<a href="https://github.com/Zibilyonik">Onur Surmeli</a>
+## Live Demo
 
-# Live Version
-<a href="https://eventyangu.herokuapp.com">Live Version</a>
+<a href="https://eventyangu.herokuapp.com"> Click here for a live version</a>
+
+
+## Getting Started
+
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+You need to have Ruby 2.7 and Rails 6.0.2.1 installed
+
+
+### Setup
+
+# Install
+Clone the repo and then install the needed gems:
+
+ bundle install
+
+ # Create and Migrate the database:
+
+ rails db:create <br />
+ rails db:migrate
+
+ # Run the app in a local server:
+
+ rails server
+
+
+## Authors
+
+👤 **Author1**
+
+- Github: [@githubhandle](https://github.com/emmanuelkamala)
+- Twitter: [@twitterhandle](https://twitter.com/ejkamala)
+- Linkedin: [linkedin](https://linkedin.com/emmanuelkamala)
+
+👤 **Author2**
+
+- Github: [@githubhandle](https://github.com/Zibilyonik)
