@@ -6,7 +6,6 @@ This is a practice project from the Odin Project using Ruby on Rails to create a
 
 ![screenshot](https://github.com/emmanuelkamala/private-events/raw/development/docs/event2.png)
 
-Additional description about the project and its features.
 
 ## Built With
 
